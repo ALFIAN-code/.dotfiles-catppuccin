@@ -10,11 +10,9 @@
     <a href="https://github.com/PROxZIMA/.dotfiles/stargazers">
         <img src="https://img.shields.io/github/stars/PROxZIMA/.dotfiles?color=ca9ee6&labelColor=303446&style=for-the-badge">
     </a>
-<!--     <a href="https://github.com/PROxZIMA/.dotfiles/">
+    <a href="https://github.com/PROxZIMA/.dotfiles/">
         <img src="https://img.shields.io/github/repo-size/PROxZIMA/.dotfiles?color=ea999c&labelColor=303446&style=for-the-badge">
-    </a> -->
-    
-    <img src="https://github.com/user-attachments/assets/483269ec-9701-4ca2-a3fb-319f837abf57">
+    </a>
     <a href="https://github.com/PROxZIMA/.dotfiles/blob/master/LICENSE">
         <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=ca9ee6&colorA=313244&colorB=cba6f7"/>
     </a>
@@ -23,41 +21,17 @@
 </h1>
 <br>
 
-[<img align="right" src="assets/rice.jpg" alt="Rice Preview" width="400px"/>](./assets/rice.mp4)
-
-```mint
-⠀⠀   🌸 Setup / Hyprland 🌸
- -----------------------------------
-
- ╭─ Distro  -> Archcraft x86_64
- ├─ Editor  -> VSCode / NeoVim
- ├─ Browser -> Firefox
- ├─ Shell   -> ZSH
- ╰─ Resource Monitor -> Btop
-
- ╭─ Model -> ASUS TUF Gaming A15
- ├─ CPU   -> Ryzen 7 4800H @ 4.3GHz
- ├─ GPU   -> NVIDIA GeForce RTX 3050
- ╰─ Resolution -> 1920x1080
-
- ╭─ WM       -> Hyprland
- ├─ Terminal -> Kitty
- ├─ Theme    -> Tokyonight-Dark-BL-LB
- ├─ Icons    -> Tokyonight-Moon
- ├─ Font     -> CaskaydiaCove Nerd Font
- ╰─ Hotel    -> Trivago
-
-                        
-```
+<img src="https://github.com/user-attachments/assets/483269ec-9701-4ca2-a3fb-319f837abf57">![image](https://github.com/user-attachments/assets/55e01727-5f42-42e5-a930-766694b66afb)
+![image](https://github.com/user-attachments/assets/6b08b6de-a7fc-4fee-a687-32001af30308) ![image](https://github.com/user-attachments/assets/4c031c83-0d9b-43a6-b395-bfbd37ca5fe6)
+![image](https://github.com/user-attachments/assets/7615f1f4-0ac7-460d-b335-bd437d1d5058)
 
 <h1></h1>
 
-### Wallpapers
+### More Wallpapers
 [<img src="./assets/photos.png" width="400px" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
 
 <img src="./assets/line_break.svg" width="100%" title="Line break">
 
-https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-a306-0402763f6d8c.mp4
 
 <div align="center">
 
@@ -69,7 +43,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 - Using <kbd>paru</kbd>
     ```sh
-    yay -S base-devel pokemon-colorscripts-git hyprland hyprpicker hyprlock hypridle xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swww swaync tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light waypaper grim slurp swappy rofi --needed
+    yay -S base-devel pokemon-colorscripts-git hyprland hyprpicker hyprlock hypridle xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swww swaync tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light waypaper grim slurp swappy rofi nwg-look --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
