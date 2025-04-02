@@ -17,16 +17,19 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 scripts=~/.scripts
 
 # gsettings
-gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
+#gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
 gsettings set org.gnome.desktop.interface font-name 'SF Pro Text 9'
-gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Moon'
-gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
+#gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Moon'
+#gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
 
 # For nemo
 gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
 
 # notification daemon
 swaync &
+
+nwg-lool -a &
+waypaper --restore
 
 # lock/suspend when idle
 hypridle &
@@ -40,7 +43,7 @@ $scripts/launch_waybar &
 # g4music &
 
 # wallpaper
-$scripts/wall ~/.config/hypr/wallpapers/1.jpg &
+#$scripts/wall ~/.config/hypr/wallpapers/4.jpg &
 
 # effects
 # $scripts/tools/rgb &

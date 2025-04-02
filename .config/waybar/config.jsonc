@@ -17,7 +17,8 @@
         // "memory",
         // "temperature",
         // "disk",
-        "custom/updates"
+        "custom/updates",
+        "idle_inhibitor",
     ],
     "modules-center": [
         "custom/music"
@@ -30,11 +31,12 @@
         "custom/notifications",
         "tray",
         "clock",
-        // "custom/weather",
-        // "custom/cycle_wall",
-        // "custom/clipboard",
-        "custom/power"
-        // "custom/custom"
+        "custom/weather",
+        "custom/cycle_wall",
+        "custom/clipboard",
+        //"custom/power",
+        "custom/custom",
+	"custom/power"
     ],
     "custom/launcher": {
         "format": "{}",
@@ -42,8 +44,8 @@
         "exec": "echo '{\"text\":\"💧\",\"tooltip\":\"Drun | Run\"}'",
         "return-type": "json",
         "on-click": "pkill tofi || sleep 0.15 && tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
-        "on-click-right": "pkill tofi || sleep 0.15 && tofi-run -c ~/.config/tofi/tofi.launcher.conf",
-        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill tofi || sleep 0.15 && tofi-run -c ~/.config/tofi/tofi.launcher.conf",
+        "on-click": "pkill rofi || /home/alfian/.config/hypr/script/launcher.sh",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
     "hyprland/workspaces": {
@@ -229,10 +231,10 @@
         "spacing": 15
     },
     "clock": {
-        "timezone": "Asia/Calcutta",
-        "format": " {:%d <small>%a</small> %H:%M}",
+        "timezone": "Asia/Jakarta",
+        "format": " {:%d <small>%a</small> %I:%M %p}",
         //"format": " {:%a %b %d %Y | %H:%M}",
-        "format-alt": " {:%A %B %d %Y (%V) | %r}",
+        "format-alt": " {:%A %B %d %Y (%V) | %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar-weeks-pos": "right",
         "today-format": "<span color='#f38ba8'><b><u>{}</u></b></span>",
