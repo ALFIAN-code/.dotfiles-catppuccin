@@ -10,9 +10,11 @@
     <a href="https://github.com/PROxZIMA/.dotfiles/stargazers">
         <img src="https://img.shields.io/github/stars/PROxZIMA/.dotfiles?color=ca9ee6&labelColor=303446&style=for-the-badge">
     </a>
-    <a href="https://github.com/PROxZIMA/.dotfiles/">
+<!--     <a href="https://github.com/PROxZIMA/.dotfiles/">
         <img src="https://img.shields.io/github/repo-size/PROxZIMA/.dotfiles?color=ea999c&labelColor=303446&style=for-the-badge">
-    </a>
+    </a> -->
+    ![image](https://github.com/user-attachments/assets/483269ec-9701-4ca2-a3fb-319f837abf57)
+
     <a href="https://github.com/PROxZIMA/.dotfiles/blob/master/LICENSE">
         <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=ca9ee6&colorA=313244&colorB=cba6f7"/>
     </a>
