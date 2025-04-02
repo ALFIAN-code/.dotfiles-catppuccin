@@ -21,41 +21,17 @@
 </h1>
 <br>
 
-[<img align="right" src="assets/rice.jpg" alt="Rice Preview" width="400px"/>](./assets/rice.mp4)
-
-```mint
-⠀⠀   🌸 Setup / Hyprland 🌸
- -----------------------------------
-
- ╭─ Distro  -> Archcraft x86_64
- ├─ Editor  -> VSCode / NeoVim
- ├─ Browser -> Firefox
- ├─ Shell   -> ZSH
- ╰─ Resource Monitor -> Btop
-
- ╭─ Model -> ASUS TUF Gaming A15
- ├─ CPU   -> Ryzen 7 4800H @ 4.3GHz
- ├─ GPU   -> NVIDIA GeForce RTX 3050
- ╰─ Resolution -> 1920x1080
-
- ╭─ WM       -> Hyprland
- ├─ Terminal -> Kitty
- ├─ Theme    -> Tokyonight-Dark-BL-LB
- ├─ Icons    -> Tokyonight-Moon
- ├─ Font     -> CaskaydiaCove Nerd Font
- ╰─ Hotel    -> Trivago
-
-                        
-```
+<img src="https://github.com/user-attachments/assets/483269ec-9701-4ca2-a3fb-319f837abf57">![image](https://github.com/user-attachments/assets/55e01727-5f42-42e5-a930-766694b66afb)
+![image](https://github.com/user-attachments/assets/6b08b6de-a7fc-4fee-a687-32001af30308) ![image](https://github.com/user-attachments/assets/4c031c83-0d9b-43a6-b395-bfbd37ca5fe6)
+![image](https://github.com/user-attachments/assets/7615f1f4-0ac7-460d-b335-bd437d1d5058)
 
 <h1></h1>
 
-### Wallpapers
+### More Wallpapers
 [<img src="./assets/photos.png" width="400px" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
 
 <img src="./assets/line_break.svg" width="100%" title="Line break">
 
-https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-a306-0402763f6d8c.mp4
 
 <div align="center">
 
@@ -67,17 +43,17 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 - Using <kbd>paru</kbd>
     ```sh
-    paru -S base-devel pokemon-colorscripts-git hyprland hyprpicker hyprlock hypridle xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swww swaync tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light --needed
+    yay -S base-devel pokemon-colorscripts-git hyprland hyprpicker hyprlock hypridle xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swww swaync tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light waypaper grim slurp swappy rofi nwg-look --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
     ```sh
-    paru -R xdg-desktop-portal-wlr
+    yay -R xdg-desktop-portal-wlr
     ```
 
 - Extra dependencies (not necessary)
     ```sh
-    paru -S system76-power obs-studio wlrobs-hg v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms chromium-wayland-vaapi qalculate-gtk qimgv-light rlr-git uget libreoffice-fresh nemo bulky --needed
+    yay -S system76-power obs-studio wlrobs-hg v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms chromium-wayland-vaapi qalculate-gtk qimgv-light rlr-git uget libreoffice-fresh nemo bulky --needed
     ```
 
 - [<kbd>Chaotic-AUR</kbd>](https://aur.chaotic.cx/) :: Automated building repo for AUR packages 👨🏻‍💻
@@ -101,6 +77,11 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
     sudo cp -r themes/Tokyonight-Dark-BL-LB /usr/share/themes/
     ```
 
+<h4>How to change gtk theme</h4>
+<p>to select theme, u can open nwg-look or gtk settings in ur apps, and select theme u like, u can install any theme you want, other than Tokyo-night</p>
+<br>    
+<br>
+
 - <kbd>Icons</kbd>:: [<kbd>Tokyonight-Moon</kbd>](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme)
     ```sh
     cd ~/Downloads
@@ -117,6 +98,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
     sudo cp -r kde/cursors/Sweet-cursors /usr/share/icons/
     ```
 
+
 - <kbd>GRUB</kbd> :: [<kbd>PROxZIMA/boo-grub</kbd>](https://github.com/PROxZIMA/boo-grub)
 - <kbd>Plymouth</kbd> :: [<kbd>PROxZIMA/proxzima-plymouth</kbd>](https://github.com/PROxZIMA/proxzima-plymouth)
 - <kbd>SDDM</kbd> :: [<kbd>PROxZIMA/boo-sddm</kbd>](https://github.com/PROxZIMA/boo-sddm)
@@ -131,6 +113,7 @@ git clone https://github.com/PROxZIMA/.dotfiles.git
 cd .dotfiles
 cp -r .config .icons .local .mpd .ncmpcpp .scripts ~/
 cp .face .fonts.conf .dmrc .gtkrc-2.0 ~/
+cp -r Pictures/wallpapers ~/
 chmod -R +x ~/.scripts/
 chmod +x ~/.config/hypr/autostart
 chmod -R +x ~/.config/wlogout/
@@ -185,16 +168,15 @@ Use the following command to convert your <kbd>CSS</kbd> file to <kbd>Customize 
 
 <h1></h1>
 
-<details>
 <summary><h3>Credits</h3></summary>
 
 _© [r/unixporn](https://www.reddit.com/r/unixporn)_
 
 _© All the maintainers and the artists <3_
 
-_© [flick0](https://github.com/flick0/dotfiles/tree/aurora) © [Syndrizzle](https://github.com/syndrizzle/hotfiles/tree/bspwm) © [NvChad](https://github.com/NvChad) © [adi1090x](https://github.com/adi1090x)_
+_© [flick0](https://github.com/flick0/dotfiles/tree/aurora)  © [PROxZIMA](https://github.com/PROxZIMA/.dotfiles) © [Syndrizzle](https://github.com/syndrizzle/hotfiles/tree/bspwm) © [NvChad](https://github.com/NvChad) © [adi1090x](https://github.com/adi1090x)_
 
-</details>
+
 
 <img src="./assets/catppuccin_cat_on_line.svg" width="100%" title="Footer">
 
