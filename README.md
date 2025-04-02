@@ -77,6 +77,11 @@
     sudo cp -r themes/Tokyonight-Dark-BL-LB /usr/share/themes/
     ```
 
+<h4>How to change gtk theme</h4>
+<p>to select theme, u can open nwg-look or gtk settings in ur apps, and select theme u like, u can install any theme you want, other than Tokyo-night</p>
+<br>    
+<br>
+
 - <kbd>Icons</kbd>:: [<kbd>Tokyonight-Moon</kbd>](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme)
     ```sh
     cd ~/Downloads
@@ -92,6 +97,7 @@
     cd Sweet/
     sudo cp -r kde/cursors/Sweet-cursors /usr/share/icons/
     ```
+
 
 - <kbd>GRUB</kbd> :: [<kbd>PROxZIMA/boo-grub</kbd>](https://github.com/PROxZIMA/boo-grub)
 - <kbd>Plymouth</kbd> :: [<kbd>PROxZIMA/proxzima-plymouth</kbd>](https://github.com/PROxZIMA/proxzima-plymouth)
