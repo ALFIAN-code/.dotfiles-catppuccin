@@ -41,9 +41,9 @@
 <details>
 <summary><h3>Dependencies</h3></summary>
 
-- Using <kbd>paru</kbd>
+- Using <kbd>yay</kbd>
     ```sh
-    yay -S base-devel pokemon-colorscripts-git hyprland hyprpicker hyprlock hypridle xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swww swaync tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light waypaper grim slurp swappy rofi nwg-look --needed
+    yay -S base-devel pokemon-colorscripts-git hyprland hyprpicker hyprlock hypridle xdg-desktop-portal-hyprland-git waybar cava kitty wofi starship wl-clipboard swww swaync tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light waypaper grim slurp swappy rofi nwg-look fish --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
@@ -117,6 +117,9 @@ cp -r Pictures/wallpapers ~/
 chmod -R +x ~/.scripts/
 chmod +x ~/.config/hypr/autostart
 chmod -R +x ~/.config/wlogout/
+chsh -s $(which fish)
+curl -sS https://starship.rs/install.sh | sh
+starship init fish | source
 ```
 
 > **Warning**
