@@ -28,7 +28,7 @@ gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
 # notification daemon
 swaync &
 
-nwg-lool -a &
+nwg-look -a &
 waypaper --restore
 
 # lock/suspend when idle
@@ -49,9 +49,10 @@ $scripts/launch_waybar &
 # $scripts/tools/rgb &
 
 # Applets
-$scripts/appindicator.py &
+#$scripts/appindicator.py &
 blueman-applet &
-nm-applet --indicator &\
+nm-applet --indicator &
+
 
 # other
 hyprctl setcursor Sweet-cursors 24
