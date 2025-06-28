@@ -1,20 +1,33 @@
 #!/bin/bash
-# Pastikan upower sudah terinstal dan BAT-nya terdeteksi
-# Dapatkan path baterai (misalnya /org/freedesktop/UPower/devices/battery_BAT1)
-BATTERY_PATH=$(upower -e | grep BAT)
-LOW_BATTERY_THRESHOLD=15
-SUSPEND_THRESHOLD=5
+
+# Pastikan upower sudah terinstal
+BATTERY_PATH=$(upower -e | grep battery_BAT)
+LOW_THRESHOLDS=(20 15 10)
+SUSPEND_THRESHOLD=7
 
 prev_state=""
+notified_levels=()
 
-# Mulai monitoring detail baterai secara real time
+# Fungsi untuk mengirim notifikasi sekali per level
+send_once() {
+    level=$1
+    message=$2
+    urgency=$3
+
+    if [[ ! " ${notified_levels[@]} " =~ " ${level} " ]]; then
+        notify-send -u "$urgency" "Peringatan Baterai" "$message"
+        notified_levels+=("$level")
+    fi
+}
+
+# Monitoring upower secara real-time
 upower --monitor-detail "$BATTERY_PATH" | while read -r line; do
-    # Jika ada perubahan state (charging/discharging)
     if echo "$line" | grep -q "state:"; then
         state=$(echo "$line" | awk '{print $2}')
         if [ "$state" != "$prev_state" ]; then
             if [ "$state" = "charging" ]; then
                 notify-send "Charger Connected" "Charger telah dicolok."
+                notified_levels=()  # Reset daftar level yang sudah dinotifikasi
             elif [ "$state" = "discharging" ]; then
                 notify-send "Charger Disconnected" "Charger telah dicabut."
             fi
@@ -22,25 +35,25 @@ upower --monitor-detail "$BATTERY_PATH" | while read -r line; do
         fi
     fi
 
-    # Jika ada perubahan level baterai
     if echo "$line" | grep -q "percentage:"; then
-        # Contoh output: "  percentage:          86%"
         percentage=$(echo "$line" | awk '{print $2}' | sed 's/%//')
-        
+
         if [ "$prev_state" = "charging" ]; then
             if [ "$percentage" -eq 100 ]; then
                 notify-send "Baterai Penuh" "Baterai Anda telah penuh."
-                # Setelah notifikasi penuh, tidak melakukan aksi lebih lanjut
-                # Tunggu hingga ada event baterai berikutnya
             fi
         elif [ "$prev_state" = "discharging" ]; then
             if [ "$percentage" -le "$SUSPEND_THRESHOLD" ]; then
-                notify-send "Baterai Sangat Lemah" "Baterai Anda tersisa $percentage%. Harap segera isi daya." -u critical
-                notify-send "Sistem akan ditangguhkan" "Sistem akan ditangguhkan dalam 20 detik."
+                notify-send -u critical "Baterai Sangat Lemah" "Baterai Anda $percentage%. Sistem akan ditangguhkan dalam 20 detik!"
                 sleep 20
                 systemctl suspend
-            elif [ "$percentage" -le "$LOW_BATTERY_THRESHOLD" ]; then
-                notify-send "Baterai Lemah" "Baterai Anda tersisa $percentage%. Harap segera isi daya." -u critical
+            else
+                for threshold in "${LOW_THRESHOLDS[@]}"; do
+                    if [ "$percentage" -le "$threshold" ]; then
+                        send_once "$threshold" "Baterai tinggal $percentage%. Harap segera isi daya." "critical"
+                        break  # hanya kirim satu notifikasi terdekat
+                    fi
+                done
             fi
         fi
     fi
